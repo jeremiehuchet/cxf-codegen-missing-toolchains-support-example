@@ -1,6 +1,8 @@
 CXF codegen plugin is not toolchains aware
 ==========================================
 
+See also [CXF-6268](https://issues.apache.org/jira/browse/CXF-6268) Make cxf-codegen-plugin toolchains aware during maven build
+
 This project aims to point out that `cxf-codegen-plugin` is not _toolchains aware_.
 The [maven-toolchains-plugins](http://maven.apache.org/plugins/maven-toolchains-plugin) provides to share configuration across plugins.
 
