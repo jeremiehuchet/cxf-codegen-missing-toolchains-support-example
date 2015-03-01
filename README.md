@@ -14,24 +14,24 @@ How to run this example
 
 - you must run maven commands with a JDK 7 or higher
 - you must configure a toolchain _jdk_ version _6_ in your `~/.m2/toolchains.xml`
-
-    <toolchains>
-      <toolchain>
-        <type>jdk</type>
-        <provides>
-          <version>6</version>
-        </provides>
-        <configuration>
-          <jdkHome>{path to you JDK 6 installation}</jdkHome>
-        </configuration>
-      </toolchain>
-    </toolchains>
-
+```xml
+<toolchains>
+  <toolchain>
+    <type>jdk</type>
+    <provides>
+      <version>6</version>
+    </provides>
+    <configuration>
+      <jdkHome>{path to you JDK 6 installation}</jdkHome>
+    </configuration>
+  </toolchain>
+</toolchains>
+```
 - run `mvn generate-sources`
 - take a look at generated source code in `target/generated-sources/cxf`
 - you can see, for instance, that `HelloWorldService.java` uses a constructor which is not provided by JDK 6 
-
-    Service(java.net.URL,javax.xml.namespace.QName,javax.xml.ws.WebServiceFeature[])
-
+```
+Service(java.net.URL,javax.xml.namespace.QName,javax.xml.ws.WebServiceFeature[])
+```
 See [javax.xml.ws.Service](http://docs.oracle.com/javase/6/docs/api/javax/xml/ws/Service.html).
 - run `mvn compile` if you still have doubts
